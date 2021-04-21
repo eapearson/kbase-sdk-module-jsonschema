@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://kbase.us/schemas/samples/fields/sesar/purpose.1-0-0.json",
+  "title": "Purpose",
+  "type": "string",
+  "kbase": {
+    "display": {
+      "label": "Purpose"
+    },
+    "sample": {
+      "key": "purpose",
+      "columnTitle": "Purpose"
+    }
+  }
+}

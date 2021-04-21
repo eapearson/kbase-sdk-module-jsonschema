@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://kbase.us/schemas/samples/fields/sesar/is_archived.1-0-0.json",
+  "title": "Is Archived",
+  "type": "string",
+  "kbase": {
+    "display": {
+      "label": "Is Archived"
+    },
+    "sample": {
+      "key": "is_archived",
+      "columnTitle": "Is Archived"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://kbase.us/schemas/samples/fields/sesar/type_of_well.1-0-0.json",
+  "title": "Type of Well",
+  "type": "string",
+  "kbase": {
+    "display": {
+      "label": "Type of Well"
+    },
+    "sample": {
+      "key": "type_of_well",
+      "columnTitle": "Type of Well"
+    }
+  }
+}
