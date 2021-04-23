@@ -1,0 +1,7 @@
+module-name: JSONSchema
+module-description: Repository and server for versioned JSON Schemas
+service-language: go
+module-version: 0.1.0
+owners: ["eapearson"]
+service-config:
+  dynamic-service: true
