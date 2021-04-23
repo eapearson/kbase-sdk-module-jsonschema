@@ -10,7 +10,7 @@ compile:
 	go build server.go
 
 build-image:
-	@bash scripts/build-image.sh
+	@bash local-scripts/build-image.sh
 
 run-image:
-	@bash scripts/run-image.sh
+	@bash local-scripts/run-image.sh

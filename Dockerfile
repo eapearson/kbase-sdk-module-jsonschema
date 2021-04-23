@@ -27,6 +27,7 @@ ARG TAG
 RUN mkdir -p /kb/module
 COPY --from=builder /build/server /kb/module
 COPY --from=builder /build/schemas /kb/module/schemas
+COPY --from=builder /build/scripts  /kb/module/scripts
 
 # The BUILD_DATE value seem to bust the docker cache when the timestamp changes, move to
 # the end
@@ -47,4 +48,6 @@ WORKDIR /kb/module
 ENV SCHEMA_ROOT=/kb/module/schemas
 ENV PORT=5000
 
-CMD [ "./server" ]
+ENTRYPOINT ["sh", "./scripts/entrypoint.sh"]
+
+CMD [ ]
