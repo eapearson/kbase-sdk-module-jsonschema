@@ -9,8 +9,8 @@ start:
 compile:
 	go build server.go
 
-build-image:
+dev-image:
 	@bash local-scripts/build-image.sh
 
-run-image:
+run-dev-image:
 	@bash local-scripts/run-image.sh

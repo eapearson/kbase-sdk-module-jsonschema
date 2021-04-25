@@ -17,7 +17,7 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/rpc", paths.HandleRPC).Methods("POST")
 	router.HandleFunc("/about", paths.HandleGetAbout).Methods("GET")
-	router.HandleFunc("/schema/{path:.*}/{schema}.{version}.json", paths.HandleGetSchema).Methods("GET")
-	router.HandleFunc("/schema/{path:.*}/{schema}.json", paths.HandleGetSchema).Methods("GET")
+	router.HandleFunc("/schemas/{path:.*}/{schema}.{version}.json", paths.HandleGetSchema).Methods("GET")
+	router.HandleFunc("/schemas/{path:.*}/{schema}.json", paths.HandleGetSchema).Methods("GET")
 	log.Fatal(http.ListenAndServe(address, router))
 }
