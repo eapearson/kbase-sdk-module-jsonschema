@@ -80,6 +80,7 @@ go build server.go
 
 ```shell
 export PORT=8080
+expoort SCHEMA_ROOT=`pwd`/schemas
 go run server.go
 ```
 

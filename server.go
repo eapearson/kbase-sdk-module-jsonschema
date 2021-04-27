@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gorilla/mux"
 	"github.com/kbase/kbase-sdk-module-jsonschema/paths"
+	"github.com/rs/cors"
 	"log"
 	"net/http"
 	"os"
@@ -19,5 +20,7 @@ func main() {
 	router.HandleFunc("/about", paths.HandleGetAbout).Methods("GET")
 	router.HandleFunc("/schemas/{path:.*}/{schema}.{version}.json", paths.HandleGetSchema).Methods("GET")
 	router.HandleFunc("/schemas/{path:.*}/{schema}.json", paths.HandleGetSchema).Methods("GET")
-	log.Fatal(http.ListenAndServe(address, router))
+
+	corsHandler := cors.Default().Handler(router)
+	log.Fatal(http.ListenAndServe(address, corsHandler))
 }
